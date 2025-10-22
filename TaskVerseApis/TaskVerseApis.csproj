@@ -22,6 +22,14 @@
     <Folder Include="Resources\profilepictures\admin\" />
     <Folder Include="Resources\profilepictures\managers\" />
     <Folder Include="Resources\profilepictures\users\" />
+	  
   </ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Resources\**\*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
 
 </Project>
