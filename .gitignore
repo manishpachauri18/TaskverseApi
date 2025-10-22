@@ -1,0 +1,23 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+.nuget/
+
+# LocalDB
+*.mdf
+*.ldf
+
+# Others
+*.DS_Store
