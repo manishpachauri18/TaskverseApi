@@ -20,7 +20,7 @@ namespace TaskVerseApis.Repositories
             _roleManager = roleManager;
             _signInManager = signInManager;
         }
-        //new line comment
+        //new line commentfd
         public async Task<ApplicationUser?> GetByEmailAsync(string email)
         {
             return await _userManager.FindByEmailAsync(email);
