@@ -7,5 +7,6 @@ namespace TaskVerseApis.Controllers
     [ApiController]
     public class ManagerController : ControllerBase
     {
+        
     }
 }

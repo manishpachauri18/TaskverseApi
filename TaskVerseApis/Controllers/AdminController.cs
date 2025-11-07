@@ -4,16 +4,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TaskVerseApis.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    [Authorize]
-    public class AdminController : ControllerBase
-    {
+    
 
-        [HttpGet]
-        protected string GetInfo()
+        [Authorize]
+        [Route("api/[controller]")]
+        [ApiController]
+        public class AdminController : ControllerBase
         {
-            return "Only Authorised By the Admin Policy";
+            [HttpGet("GetInfo")]
+            public IActionResult GetInfo()
+            {
+                return Ok("Only Authorised By the Admin Policy");
+            }
         }
-    }
+
+    
 }
