@@ -31,15 +31,15 @@ namespace TaskVerseApis.Controllers
                     return BadRequest(new { message = "User creation failed. Email may already exist or invalid data." });
 
                 // 2️⃣ Add profile picture if provided
-                //if (model.ProfilePicture != null)
-                //{
-                //    var result = await _userService.AddProfilePictureAsync(model, user.Id);
-                //    if (!result)
-                //    {
-                //        // Optional: You can either continue or rollback user creation if profile picture fails
-                //        return BadRequest(new { message = "User created but adding profile picture failed." });
-                //    }
-                //}
+                if (model.ProfilePicture != null)
+                {
+                    var result = await _userService.AddProfilePictureAsync(model, user.Id);
+                    if (!result)
+                    {
+                        // Optional: You can either continue or rollback user creation if profile picture fails
+                        return BadRequest(new { message = "User created but adding profile picture failed." });
+                    }
+                }
 
                 return Ok(new
                 {
